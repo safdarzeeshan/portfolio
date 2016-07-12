@@ -1,0 +1,11 @@
+<div class='gallery-header'>
+    <h2>Photography & Design</h2>
+    <hr>
+    <p>Here are some examples of my work in the recent past</p>
+</div>
+<br>
+<section class='col-lg-10 col-lg-offset-1' id="photos">
+    <a hred='#' *ngFor = "let image of images" (click)='open(image.media$group.media$content[0].url)'>
+        <img src="{{image.media$group.media$thumbnail[2].url}}">
+    </a>
+</section>

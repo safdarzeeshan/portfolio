@@ -7,10 +7,29 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+
+  'rxjs': 'vendor/rxjs',
+  '@angular/core': 'vendor/@angular/core/bundles/core.umd.js',
+  '@angular/common': 'vendor/@angular/common/bundles/common.umd.js',
+  '@angular/compiler': 'vendor/@angular/compiler/bundles/compiler.umd.js',
+  '@angular/platform-browser': 'vendor/@angular/platform-browser/bundles/platform-browser.umd.js',
+  '@angular/platform-browser-dynamic': 'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+  // '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
+  'angular2-modal': 'vendor/angular2-modal',
+  'angular2-modal/platform-browser': 'vendor/angular2-modal/platform-browser'
 };
 
 /** User packages configuration. */
 const packages: any = {
+
+  'rxjs': {main: 'index'},
+  'demo': {defaultExtension: 'js'},
+
+  'angular2-modal': {main: 'index.js', defaultExtension: 'js'},
+  'angular2-modal/platform-browser': {main: 'index.js', defaultExtension: 'js'},
+  'vendor/angular2-modal/plugins/bootstrap': {main: 'index.js', defaultExtension: 'js'},
+  'vendor/angular2-modal/plugins/vex': {main: 'index.js', defaultExtension: 'js'},
+  'vendor/angular2-modal/plugins/js-native': {main: 'index.js', defaultExtension: 'js'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,6 +52,10 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/about',
+  'app/home',
+  'app/blog',
+  'app/gallery',
   /** @cli-barrel */
 ];
 

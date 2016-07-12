@@ -1,0 +1,253 @@
+<!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text col-sm-8">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="team-member">
+                            <img src="../images/about/zee.jpg" class="img-responsive img-circle" alt="">
+                            <h4>Zeeshan Safdar</h4>
+                            <br>
+                            <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 about-me">
+                        <p>There is a fine balance between design and functionality which I enjoy finding. I have transitioned from a solution architect to a full stack developer to a co-founder of startup. Over the years I’ve picked up multiple skills ranging from design and code to pitching your ideas. When I’m not at my desk I enjoy traveling, scuba diving, snow boarding and taking pictures of cool stuff.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='section-links-div'>
+                <span class='section-links'>
+                    <a href="#education">Education </a> /
+                    <a href="#experience"> Work Experience </a> /
+                    <a href="#portfolio"> Portfolio</a>
+                </span>
+                <br>
+                <a href="#education" class="scroll-down"><i class="fa fa-chevron-down"></i></a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="education" class="bg-light-gray">
+        <div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Education <i class="fa fa-graduation-cap"></i></h2>
+                    <hr>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="col-lg-10 row text-center custom-center">
+                <div class="col-md-4">
+                    <div class="profile-circle">
+                        <img src="/images/logos/uwlogo.jpg" class="img-responsive profile-circle" alt="">
+                    </div>
+                    <h3 class="service-heading">University Of Waterloo</h3>
+                    <h4 class="service-heading">Bachelors - Electrical Engineering Co-op</h4>
+                    <p class="col-lg-11 text-muted custom-center">Course work included circuit analysis, wireless communcication, signal processing, algotihims and data structures.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-circle">
+                        <img src="/images/logos/bitmaker-banner.png" class="img-responsive profile-circle" alt="">
+                    </div>
+                    <h3 class="service-heading">Bitmaker Labs</h3>
+                    <h4 class="service-heading">User Experience Design</h4>
+                    <p class="col-lg-11 text-muted custom-center">The course focused on the principles of User Exoperience and how to apply them. These included user research, wire framing, typography and microinteractions.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-circle">
+                        <img src="/images/logos/ocadlogo.jpg" class="img-responsive profile-circle" alt="">
+                    </div>
+                    <h3 class="service-heading">Ontario College of Art & Desgin</h3>
+                    <h4 class="service-heading">Graphic Design Principles</h4>
+                    <p class="col-lg-11 text-muted custom-center">This was a studio course that thouroughly examined design principles. Drawing, photography and typrograghy were a few of the topics that were taught.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Work Experience <i class="fa fa-laptop"></i></h2>
+                    <hr>
+                </div>
+            </div>
+            <br>
+            <div *ngFor='let job of jobs | slice: 0:jobLimit' class="col-sm-6 job-div">
+                <div class='row'>
+                    <div class="job-name col-lg-8">
+                        <h3>{{job.company}}</h3>
+                        <h4>{{job.position}}</h4>
+                    </div>
+                    <div class='job-location col-lg-4'>
+                        <p>{{job.location}}</p>
+                        <p>{{job.timeline}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="job-descrition">
+                    <p>{{job.description}}</p>
+                </div>
+            </div>
+            <button class='button-show-all col-lg-2 col-lg-offset-5' [hidden]="jobLimit >= jobs.length" (click)="jobLimit = jobLimit + 3 ">SHOW ALL</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio <i class="fa fa-paint-brush"></i></h2>
+                    <hr>
+                    <h3 class="section-subheading text-muted">Some examples of my work.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/portfolio/lovetoeatit.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Love To Eat It</h4>
+                        <h5 class="text-muted">Recipe Discovery through Instagram</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../images/portfolio/stereogram.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Stereogram</h4>
+                        <h5 class="text-muted">Music Discovery</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Me  <i class="fa fa-envelope-o"></i></h2>
+                    <hr>
+                    <p>Send me an email at <a href="mailto:safdarzeeshan@gmail.com" target="_top">safdarzeeshan@gmail.com</a></p>
+                    <p>I am always interested in working on new & exciting projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <div class='portfolio-heading'>
+                                <h2>Love To Eat It</h2>
+                                <h4 class="item-intro text-muted">your foodie adventure begins with the like button</h4>
+                            </div>
+                            <div class='portfolio-body'>
+                                <p>Check it out at <a href='http://app.lovetoeat.it' target='_blank'>http://app.lovetoeat.it</a></p>
+                                <p> Our mission is to get the world eating better by encouraging people to cook more, become a hub for recipe discovery and be at the heart of the online foodie community.</p>
+                                <div class='portfolio-iframe'>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/79D-0dY255w" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <p>It instantly delivers recipes to a user’s inbox when they ‘like’ a food post on Instagram and adds those recipes to a user’s online personal cookbook. LTEI enables food bloggers to drive more traffic to their blogs and removes the tedious process of redirecting users through bio pages and static links in posts</p>
+                                <p>Technologies used are Django Rest framework, AngularJS 1.5, Ruby, Sinatra, AWS, SASS, Grunt, PostgreSQL, Sketch, S3 bucket & Instagram API<p>
+                                <p>Invision link
+                                <br>GitHub Repositry</p>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <div class='portfolio-heading'>
+                                <h2>Stereogram</h2>
+                                <h4 class="item-intro text-muted">Learn, Discover & Share your favorite music with your favorite friends.</h4>
+                            </div>
+                            <div class='portfolio-body'>
+                                <p>Stereogram is a web app to allow friends to recommend music to each other and find out what their friends are listening to. If you're a person who likes to ask their friends for music recommendations, Stereogram gives you a platform to easily do so and never lose that song.</p>
+                                <p>It leverages YouTube's and Souncloud's API for search and playback. Technologies used were Django framework, javascript, jquery and sass.</p>
+                                <p>Invision Project<a href= "https://invis.io/ZK2G0NXN4"> Stereogram</a> You can click around below</p>
+                                <div class='portfolio-iframe'>
+                                    <iframe width="424" height="916" src="//invis.io/6V2G0NYHW" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <p>GitHub Repository<i class="fa fa-github"> </i><a href= "https://github.com/safdarzeeshan/listeninto_app">https://github.com/safdarzeeshan/listeninto_app</a></p>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
