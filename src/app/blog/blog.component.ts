@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { BlogService } from '../blog.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -11,14 +12,19 @@ import { BlogService } from '../blog.service';
 })
 export class BlogComponent implements OnInit {
   posts=[];
+  name = 'test';
 
-  constructor(private blogService: BlogService) {}
+  constructor(private blogService: BlogService, public router:Router) {}
 
   ngOnInit() {
     this.blogService.getPosts()
     .subscribe(
           data => this.posts = data
     )
+  }
+
+  gotoBlogPost(id) {
+    this.router.navigate(['/blogpost', id]);
   }
 
 }

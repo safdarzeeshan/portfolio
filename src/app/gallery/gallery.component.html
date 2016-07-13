@@ -9,3 +9,11 @@
         <img src="{{image.media$group.media$thumbnail[2].url}}">
     </a>
 </section>
+
+<modal #modal>
+    <modal-header [show-close]="true">
+    </modal-header>
+    <modal-body>
+        <img class='img-responsive' src='{{imageUrl}}'>
+    </modal-body>
+</modal>

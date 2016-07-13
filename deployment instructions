@@ -1,0 +1,19 @@
+https://nodejs.org/dist/v4.4.7/node-v4.4.7-linux-x64.tar.xz
+
+>cd ~
+>wget https://nodejs.org/dist/v4.4.7/node-v4.4.7-linux-x64.tar.gz
+>cd /usr/local
+>sudo tar --strip-components 1 -xzf ~/node-v4.4.7-linux-x64.tar.gz
+>node -v
+
+
+typings install
+rm -rf typings
+npm run postinstall
+ng serve
+
+sudo chown -R $USER:$USER /root/zeeshan_portfolio/portfolio/dist
+sudo chown -R $USER:$USER /root/zeeshan_portfolio/portfolio
+sudo chmod -R 755 /root
+sudo chmod -R 755 /root/zeeshan_portfolio/portfolio
+sudo chmod -R 755 /root/zeeshan_portfolio/portfolio/dist

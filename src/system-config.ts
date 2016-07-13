@@ -14,9 +14,10 @@ const map: any = {
   '@angular/compiler': 'vendor/@angular/compiler/bundles/compiler.umd.js',
   '@angular/platform-browser': 'vendor/@angular/platform-browser/bundles/platform-browser.umd.js',
   '@angular/platform-browser-dynamic': 'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-  // '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
+  '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
   'angular2-modal': 'vendor/angular2-modal',
-  'angular2-modal/platform-browser': 'vendor/angular2-modal/platform-browser'
+  'angular2-modal/platform-browser': 'vendor/angular2-modal/platform-browser',
+  'ng2-bs3-modal': 'vendor/ng2-bs3-modal'
 };
 
 /** User packages configuration. */
@@ -24,12 +25,12 @@ const packages: any = {
 
   'rxjs': {main: 'index'},
   'demo': {defaultExtension: 'js'},
-
   'angular2-modal': {main: 'index.js', defaultExtension: 'js'},
   'angular2-modal/platform-browser': {main: 'index.js', defaultExtension: 'js'},
   'vendor/angular2-modal/plugins/bootstrap': {main: 'index.js', defaultExtension: 'js'},
   'vendor/angular2-modal/plugins/vex': {main: 'index.js', defaultExtension: 'js'},
-  'vendor/angular2-modal/plugins/js-native': {main: 'index.js', defaultExtension: 'js'}
+  'vendor/angular2-modal/plugins/js-native': {main: 'index.js', defaultExtension: 'js'},
+  'vendor/ng2-bs3-modal': { defaultExtension: 'js', main: 'ng2-bs3-modal.js'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +49,7 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'ng2-bs3-modal',
 
   // App specific barrels.
   'app',
@@ -56,6 +58,7 @@ const barrels: string[] = [
   'app/home',
   'app/blog',
   'app/gallery',
+  'app/blogpost',
   /** @cli-barrel */
 ];
 
@@ -72,7 +75,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
   },
   packages: cliSystemConfigPackages
 });

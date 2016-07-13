@@ -55,3 +55,17 @@
 .gallery-header{
   text-align: center;
 }
+
+.modal {
+    text-align:center;
+}
+
+.modal div{
+    display: inline-block;
+    width: auto;
+}
+
+.img-responsive {
+    max-height: 100vh;
+    margin: 0 auto;
+}
