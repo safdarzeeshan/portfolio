@@ -1,29 +1,27 @@
-import { Component, ViewChild, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { GalleryService } from '../gallery.service';
 import { HTTP_PROVIDERS } from '@angular/http';
-// import {Modal, BS_MODAL_PROVIDERS} from 'angular2-modal/plugins/bootstrap';
-import { MODAL_DIRECTIVES, ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
+import {Modal} from "ng2-modal";
 
 @Component({
   moduleId: module.id,
   selector: 'app-gallery',
   templateUrl: 'gallery.component.html',
-  styleUrls: ['gallery.component.css', '../app.component.css'],
+  styleUrls: ['gallery.component.css', '../app.component.css', 'gallery2.component.css'],
   providers: [GalleryService, HTTP_PROVIDERS],
-  // viewProviders: [...BS_MODAL_PROVIDERS]
-  directives: [MODAL_DIRECTIVES]
+  directives: [Modal]
 })
 
 export class GalleryComponent implements OnInit {
-  @ViewChild('modal')
-  modal: ModalComponent;
+  @ViewChild('myModal')
+  modal: Modal;
 
   images = []
   imageUrl: any;
   message:string;
+  imageIndex:number;
 
   constructor(private galleryService: GalleryService) {
-    // modal.defaultViewContainer = viewContainer;
   }
 
   ngOnInit() {
@@ -34,11 +32,21 @@ export class GalleryComponent implements OnInit {
     )
   }
 
-  open(imageUrlImage){
-    console.log(imageUrlImage);
-    this.imageUrl = imageUrlImage;
+  open(index){
+    console.log(index)
+    this.imageIndex=index;
+    console.log(this.images[index].media$group.media$content[0].url);
+    this.imageUrl = this.images[index].media$group.media$content[0].url;
     this.modal.open();
   }
 
+  nextImage(){
+    this.imageIndex++
+    this.imageUrl = this.images[this.imageIndex].media$group.media$content[0].url;
+  }
 
+  previousImage(){
+    this.imageIndex--
+    this.imageUrl = this.images[this.imageIndex].media$group.media$content[0].url;
+  }
 }

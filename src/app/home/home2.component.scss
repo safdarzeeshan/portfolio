@@ -1,3 +1,8 @@
+$tablet-portrait: "only screen and (max-width : 768px)";
+$tablet-landscape: "only screen and (max-width : 1024px)";
+$mobile-width: "only screen and (max-width : 480px)";
+$secondary-color: #ff7952;
+
 a{
   font-family: Lato;
   font-weight: 100;
@@ -33,15 +38,16 @@ header {
 }
 
 .button-show-all{
-  background-color: #dc4518;
+  background-color: #ff7952;
   border: none;
   opacity: 0.9;
   clear: both;
   color: white;
   padding: 10px;
+  transition: opacity 0.3s;
 }
 
-.button-show-all :hover{
+.button-show-all:hover{
       opacity: 1;
 }
 
@@ -98,6 +104,7 @@ header {
         line-height: 1.5;
         font-family: lato;
         color: rgb(255, 255, 255);
+        font-weight: 100;
     }
 }
 
@@ -119,5 +126,60 @@ header {
   color: white;
   p{
     font-size:18px;
+  }
+}
+
+.skill-item{
+  background-color: white;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-height: 20em;
+
+  .skill-header{
+    text-align: center;
+
+    h3{
+      margin-top: 10px;
+    }
+
+    hr{
+      width: 200px;
+      margin-top: 10px;
+    }
+
+    .skill-icon{
+      font-size: 4em;
+      color: $secondary-color;
+    }
+
+  }
+}
+
+@media #{$tablet-landscape}{
+  .skill-item{
+    min-height: 23em;
+  }
+}
+
+@media #{$mobile-width}{
+  .education-section{
+    margin-top: 4em;
+  }
+
+  .job-location{
+    text-align: left;
+    margin-top: 16px;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .skill-item{
+    padding-bottom: 15px;
+    min-height: 0;
   }
 }

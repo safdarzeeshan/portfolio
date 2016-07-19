@@ -1,0 +1,51 @@
+.gallery-header{
+  text-align: center;
+}
+
+.modal {
+    text-align:center;
+}
+
+.modal div{
+    display: inline-block;
+    width: 300px !important;
+}
+
+.custom-modal{
+    display: inline-block;
+    width: 300px !important;
+}
+
+.modal-content{
+    width: 1000px;
+}
+
+.img-responsive {
+    max-height: 100vh;
+    margin: 0 auto;
+}
+
+.modal-body{
+    display: flex;
+    align-items: center;
+
+    a:hover{
+        cursor: pointer;
+    }
+
+    a{
+        i{
+            font-size: 6em;
+        }
+    }
+}
+
+// .gallery-modal{
+
+//     background-color: red;
+//     div{
+//         div{
+//             width: 300px !important;
+//         }
+//     }
+// }

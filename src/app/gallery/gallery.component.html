@@ -5,15 +5,21 @@
 </div>
 <br>
 <section class='col-lg-10 col-lg-offset-1' id="photos">
-    <a hred='#' *ngFor = "let image of images" (click)='open(image.media$group.media$content[0].url)'>
+    <a *ngFor = "let image of images; let i=index" (click)='open(i)'>
         <img src="{{image.media$group.media$thumbnail[2].url}}">
     </a>
 </section>
 
-<modal #modal>
-    <modal-header [show-close]="true">
+<modal [closeOnOutsideClick]="true" [closeOnEscape]="true" modalClass="gallery-modal" #myModal>
+    <modal-header>
+<!--         <button class="btn btn-primary" (click)="previousImage()">previous</button>
+        <button class="btn btn-primary" (click)="nextImage()">next</button> -->
     </modal-header>
-    <modal-body>
-        <img class='img-responsive' src='{{imageUrl}}'>
-    </modal-body>
+    <modal-content>
+        <div class='modal-body row'>
+            <a (click)="previousImage()"><i class="col-lg-1 fa fa-angle-left"></i></a>
+            <img class='col-lg-9 img-responsive' src='{{imageUrl}}'>
+            <a (click)="nextImage()"><i class="col-lg-1 fa fa-angle-right"></i></a>
+        </div>
+    </modal-content>
 </modal>

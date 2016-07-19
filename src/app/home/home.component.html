@@ -1,22 +1,24 @@
 <!-- Header -->
     <header>
         <div class="container">
-            <div class="intro-text col-sm-8">
+            <div class="intro-text col-md-9 col-sm-11 col-xs-12">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3  col-sm-offset-0 col-xs-8 col-xs-offset-2">
                         <div class="team-member">
                             <img src="../images/about/zee.jpg" class="img-responsive img-circle" alt="">
                             <h4>Zeeshan Safdar</h4>
                             <br>
                             <ul class="list-inline social-buttons">
-                                <li><a href="#"><i class="fa fa-instagram"></i></a>
+                                <li><a href="https://www.instagram.com/safdarzeeshan/" target="_blank"><i class="fa fa-instagram"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                <li><a href="http://www.linkedin.com/in/zeeshan-safdar" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li><a href="https://github.com/safdarzeeshan" target="_blank"><i class="fa fa-github"></i></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-9 about-me">
+                    <div class="col-lg-8 col-md-9 col-sm-9 col-xs-12 about-me">
                         <p>There is a fine balance between design and functionality which I enjoy finding. I have transitioned from a solution architect to a full stack developer to a co-founder of startup. Over the years I’ve picked up multiple skills ranging from design and code to pitching your ideas. When I’m not at my desk I enjoy traveling, scuba diving, snow boarding and taking pictures of cool stuff.</p>
                     </div>
                 </div>
@@ -25,6 +27,7 @@
                 <span class='section-links'>
                     <a href="#education">Education </a> /
                     <a href="#experience"> Work Experience </a> /
+                    <a href="#skills"> Skills </a> /
                     <a href="#portfolio"> Portfolio</a>
                 </span>
                 <br>
@@ -46,7 +49,7 @@
             </div>
             <br>
             <div class="col-lg-10 row text-center custom-center">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-12 education-section">
                     <div class="profile-circle">
                         <img src="/images/logos/uwlogo.jpg" class="img-responsive profile-circle" alt="">
                     </div>
@@ -54,7 +57,7 @@
                     <h4 class="service-heading">Bachelors - Electrical Engineering Co-op</h4>
                     <p class="col-lg-11 text-muted custom-center">Course work included circuit analysis, wireless communcication, signal processing, algotihims and data structures.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-12 education-section ">
                     <div class="profile-circle">
                         <img src="/images/logos/bitmaker-banner.png" class="img-responsive profile-circle" alt="">
                     </div>
@@ -62,7 +65,7 @@
                     <h4 class="service-heading">User Experience Design</h4>
                     <p class="col-lg-11 text-muted custom-center">The course focused on the principles of User Exoperience and how to apply them. These included user research, wire framing, typography and microinteractions.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-12 education-section ">
                     <div class="profile-circle">
                         <img src="/images/logos/ocadlogo.jpg" class="img-responsive profile-circle" alt="">
                     </div>
@@ -84,13 +87,13 @@
                 </div>
             </div>
             <br>
-            <div *ngFor='let job of jobs | slice: 0:jobLimit' class="col-sm-6 job-div">
+            <div *ngFor='let job of jobs | slice: 0:jobLimit' class="col-lg-6 col-md-8 col-sm-10 col-xs-11 job-div">
                 <div class='row'>
-                    <div class="job-name col-lg-8">
+                    <div class="job-name col-sm-8 col-xs-11">
                         <h3>{{job.company}}</h3>
                         <h4>{{job.position}}</h4>
                     </div>
-                    <div class='job-location col-lg-4'>
+                    <div class='job-location col-sm-4 col-xs-11'>
                         <p>{{job.location}}</p>
                         <p>{{job.timeline}}</p>
                     </div>
@@ -100,12 +103,82 @@
                     <p>{{job.description}}</p>
                 </div>
             </div>
-            <button class='button-show-all col-lg-2 col-lg-offset-5' [hidden]="jobLimit >= jobs.length" (click)="jobLimit = jobLimit + 3 ">SHOW ALL</button>
+            <button class='button-show-all col-lg-3 col-sm-4 col-xs-8 custom-center' [hidden]="jobLimit >= jobs.length" (click)="jobLimit = jobLimit + 3 ">SHOW ALL</button>
+        </div>
+    </section>
+
+    <!-- Skills Grid Section -->
+    <section id="skills" class="bg-light-gray">
+        <div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Skills <i class="fa fa-magic"></i></h2>
+                    <hr>
+                    <h3 class="section-subheading text-muted col-xs-10 col-xs-offset-1">I believe there is no such thing as perfection so I am not going to give myself a rating out of 5.</h3>
+                </div>
+            </div>
+            <div class="row col-lg-11 custom-center">
+                <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+                    <div class="skill-item">
+                        <div class='skill-header'>
+                            <i class="fa fa-desktop skill-icon" aria-hidden="true"></i>
+                            <h3>Front End </h3>
+                        </div>
+                        <div class='skill-detail'>
+                            <p>My goal is to always deliver the fastest response times whilst not compromising a great user experience. I have built sites in <b>javascript, Angular 1.5, Angular 2 and ReactJs</b>. I have been the only person writing the <b>CSS</b> for two websites which has given me a lot of experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+                    <div class="skill-item">
+                        <div class='skill-header'>
+                            <i class="fa fa-newspaper-o skill-icon" aria-hidden="true"></i>
+                            <h3>Design & prototyping</h3>
+                        </div>
+                        <div class='skill-detail'>
+                            <p>I have started to give design & user experience more emphasis which has helped me develop features and design based on what people actually want. I use <b>photoshop & sketch</b> as my primary tools to design along with <b>InVision</b>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+                    <div class="skill-item">
+                        <div class='skill-header'>
+                            <i class="fa fa-terminal skill-icon" aria-hidden="true"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class='skill-detail'>
+                            <p>Majority of my work has been in <b>Python</b> with <b>Django & Django-Rest</b> with MySQL and <b>Postgresql</b> as the database. I am a fan of rest frameworks and open source libraries. I have worked on smaller projects with NodeJS, Express & MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+                    <div class="skill-item">
+                        <div class='skill-header'>
+                            <i class="fa fa-check skill-icon" aria-hidden="true"></i>
+                            <h3>Testing</h3>
+                        </div>
+                        <div class='skill-detail'>
+                            <p>Most of my earlier work was working as a consultant/architect with QA teams. I have setup frameworks using <b>SOAPUI, SOATest and Selenium</b> to test multiple messaging protocols such as HTTP, <b>MQ & JMS</b>. From a front end testing side all my projects have tests written in <b>Karma & Jasmine</b>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+                    <div class="skill-item">
+                        <div class='skill-header'>
+                            <i class="fa fa-gear skill-icon" aria-hidden="true"></i>
+                            <h3>Automation & Deployment</h3>
+                        </div>
+                        <div class='skill-detail'>
+                            <p>I am an advocate of using scaffolding tools such as yeoman as long as one knows what its doing :) I use <b>grunt, gulp & compass</b> for local development and building. I have deployed AngularJS, Django, Ruby and Elastic Search to <b>AWS</b> and setup one click deployment processes for each of them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
+    <section id="portfolio">
         <div>
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -115,7 +188,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -129,7 +202,7 @@
                         <h5 class="text-muted">Recipe Discovery through Instagram</h5>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -160,23 +233,6 @@
             </div>
         </div>
     </section>
-
-<!--     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> -->
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
@@ -237,6 +293,7 @@
                                 <h4 class="item-intro text-muted">Learn, Discover & Share your favorite music with your favorite friends.</h4>
                             </div>
                             <div class='portfolio-body'>
+                                <p>Check it out at <a href='http://www.stereogram.xyz' target='_blank'>http://www.stereogram.xyz</a></p>
                                 <p>Stereogram is a web app to allow friends to recommend music to each other and find out what their friends are listening to. If you're a person who likes to ask their friends for music recommendations, Stereogram gives you a platform to easily do so and never lose that song.</p>
                                 <p>It leverages YouTube's and Souncloud's API for search and playback. Technologies used were Django framework, javascript, jquery and sass.</p>
                                 <p>Invision Project<a href= "https://invis.io/ZK2G0NXN4"> Stereogram</a> You can click around below</p>

@@ -15,9 +15,7 @@ const map: any = {
   '@angular/platform-browser': 'vendor/@angular/platform-browser/bundles/platform-browser.umd.js',
   '@angular/platform-browser-dynamic': 'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
   '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
-  'angular2-modal': 'vendor/angular2-modal',
-  'angular2-modal/platform-browser': 'vendor/angular2-modal/platform-browser',
-  'ng2-bs3-modal': 'vendor/ng2-bs3-modal'
+  'ng2-modal': 'vendor/ng2-modal'
 };
 
 /** User packages configuration. */
@@ -25,12 +23,7 @@ const packages: any = {
 
   'rxjs': {main: 'index'},
   'demo': {defaultExtension: 'js'},
-  'angular2-modal': {main: 'index.js', defaultExtension: 'js'},
-  'angular2-modal/platform-browser': {main: 'index.js', defaultExtension: 'js'},
-  'vendor/angular2-modal/plugins/bootstrap': {main: 'index.js', defaultExtension: 'js'},
-  'vendor/angular2-modal/plugins/vex': {main: 'index.js', defaultExtension: 'js'},
-  'vendor/angular2-modal/plugins/js-native': {main: 'index.js', defaultExtension: 'js'},
-  'vendor/ng2-bs3-modal': { defaultExtension: 'js', main: 'ng2-bs3-modal.js'}
+  'vendor/ng2-modal': { defaultExtension: 'js', main: 'index.js'}
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,7 +42,8 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
-  'ng2-bs3-modal',
+  // 'ng2-bs3-modal',
+  'ng2-modal',
 
   // App specific barrels.
   'app',
