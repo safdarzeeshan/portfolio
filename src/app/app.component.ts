@@ -23,7 +23,7 @@ import { ROUTER_DIRECTIVES} from '@angular/router';
         <ul class="nav navbar-nav">
           <li><a [routerLink]="['/']">About</a></li>
           <li><a [routerLink]="['/gallery']">Gallery</a></li>
-          <li><a [routerLink]="['/blog']">Blog</a></li>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
