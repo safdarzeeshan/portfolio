@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {PageScroll} from 'ng2-page-scroll';
 
 @Component({
   moduleId: module.id,
   selector: 'app-home',
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css', 'home2.component.css', '../app.component.css']
+  styleUrls: ['home.component.css', 'home2.component.css', '../app.component.css'],
+  directives: [PageScroll]
+
 })
 export class HomeComponent implements OnInit {
     jobs = [{company:'Love To Eat It', location:'Toronto, ON', timeline:'Jan 2016 - Current', position:'Co-Founder & Chief Technology Officer',
