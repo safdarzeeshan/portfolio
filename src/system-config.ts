@@ -16,7 +16,7 @@ const map: any = {
   '@angular/platform-browser-dynamic': 'vendor/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
   '@angular/router': 'vendor/@angular/router/bundles/router.umd.js',
   'ng2-modal': 'vendor/ng2-modal',
-  'ng2-page-scroll': 'vendor/ng2-page-scroll'
+  'ng2-page-scroll': 'vendor/ng2-page-scroll',
 };
 
 /** User packages configuration. */
@@ -25,7 +25,7 @@ const packages: any = {
   'rxjs': {main: 'index'},
   'demo': {defaultExtension: 'js'},
   'vendor/ng2-modal': { defaultExtension: 'js', main: 'index.js'},
-  'vendor/ng2-page-scroll': { defaultExtension: 'js', main: 'ng2-page-scroll.js' }
+  'vendor/ng2-page-scroll': { defaultExtension: 'js', main: 'ng2-page-scroll.js' },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,6 +41,7 @@ const barrels: string[] = [
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  '@angular/forms',
 
   // Thirdparty barrels.
   'rxjs',

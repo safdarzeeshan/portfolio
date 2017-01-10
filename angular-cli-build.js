@@ -18,7 +18,7 @@ module.exports = function(defaults) {
       '@angular/**/*.+(js|js.map)',
       // 'ng2-bs3-modal/**/*.js'
       'ng2-modal/*.js',
-      'ng2-page-scroll/**/*.+(js|js.map)'
+      'ng2-page-scroll/**/*.+(js|js.map)',
     ]
   });
 };
